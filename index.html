@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Operacional</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-primary: #f8fafc;
+            --accent-blue: #3b82f6;
+            --accent-green: #10b981;
+            --accent-purple: #8b5cf6;
+            --accent-orange: #f59e0b;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            margin: 0;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding-bottom: 30px;
+            border-bottom: 1px solid #334155;
+            margin-bottom: 30px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .category-card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+            border-top: 4px solid var(--accent-blue);
+        }
+
+        .category-card h2 {
+            font-size: 1.2rem;
+            margin-top: 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .link-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .btn {
+            display: block;
+            padding: 10px 15px;
+            background-color: #334155;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            transition: all 0.2s;
+            border-left: 3px solid transparent;
+        }
+
+        .btn:hover {
+            background-color: #475569;
+            transform: translateX(5px);
+            border-left: 3px solid var(--accent-blue);
+        }
+
+        /* Cores por Categoria */
+        .cat-insumos { border-top-color: var(--accent-blue); }
+        .cat-forms { border-top-color: var(--accent-green); }
+        .cat-rh { border-top-color: var(--accent-purple); }
+        .cat-bi { border-top-color: var(--accent-orange); }
+
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 0.8rem;
+            color: #64748b;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>🚀 Dashboard de Gestão Operacional</h1>
+    <p>Central de Links e Controle de Insumos</p>
+</header>
+
+<div class="container">
+
+    <div class="category-card cat-insumos">
+        <h2>📦 Gestão e Planilhas</h2>
+        <div class="link-grid">
+            <a href="https://docs.google.com/spreadsheets/d/1ovN1AHu9ZW5gjQaitEAOwvxwmwJcP43e/edit?gid=1963186997" target="_blank" class="btn">📊 Presença Insumos</a>
+            <a href="https://docs.google.com/spreadsheets/d/1g_MDy99Z8QYXGgvFlWGTnku73Ski5YlZDEsAFskdPh0/edit?gid=1833847677" target="_blank" class="btn">📥 Recebimento (Planilha)</a>
+            <a href="https://docs.google.com/spreadsheets/d/1wXcqwjDDgIIeeN0B9Nmi7JCSh7O4sfPT4vYyW5N5hv0/edit?gid=1306262406" target="_blank" class="btn">⬆️ Putway (Planilha)</a>
+            <a href="https://docs.google.com/spreadsheets/d/1mQ-Gf6uBp1sDHnECsnhiw0gQoZuTWraTypuKakKHwBw/edit?gid=1886131232" target="_blank" class="btn">↔️ Transferência (Planilha)</a>
+            <a href="https://docs.google.com/spreadsheets/d/1g_MDy99Z8QYXGgvFlWGTnku73Ski5YlZDEsAFskdPh0/edit?gid=1471086472" target="_blank" class="btn">📉 DOH</a>
+            <a href="https://docs.google.com/spreadsheets/d/1ugDEWozIXJtqDk7BxawHMxxDYX9ne1wweGs0G6nmcAg/edit?gid=1406526947" target="_blank" class="btn">🔢 Contagem Inventário</a>
+            <a href="https://docs.google.com/spreadsheets/d/18UlSUWHjEprOlWvbnbKGj-pRq-iDdlvgEMRHKbeZbN4/edit?gid=0" target="_blank" class="btn">🏷️ Base LPN</a>
+        </div>
+    </div>
+
+    <div class="category-card cat-forms">
+        <h2>📝 Lançamentos (Forms)</h2>
+        <div class="link-grid">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSd0vLtBB3wVo_wVdmuKqWTKCvdiyESambBRtduNFtcu9z6aCQ/viewform" target="_blank" class="btn">📝 Recebimento Insumos</a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSejRJFfqZ2oiPyQcCOcrF71cEUsUfbcnAlgMQgP4IKpFEO-IA/viewform" target="_blank" class="btn">📝 Putway Insumos</a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfHiL8xTJ5SnvDty0qoHo2i34_r6xhtoGzr7JHGtL8XXngAtQ/viewform" target="_blank" class="btn">📝 Transfer Insumos</a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSc9Ze-pTnIIMOAbiFV6o17AForiaRqPXmpFwb1M54CTGkTpPg/viewform" target="_blank" class="btn">📝 Contagem/Solicitação</a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSeq9DusowFUI9et4IKpKQYaMz-tMm4QiemcIfL8xW6l6mu6zA/viewform" target="_blank" class="btn">📝 Entrada/Saída Materiais</a>
+        </div>
+    </div>
+
+    <div class="category-card cat-rh">
+        <h2>👕 RH & Uniformes</h2>
+        <div class="link-grid">
+            <a href="https://docs.google.com/spreadsheets/d/1n8vd1UpGafwhb29_CYavTyMzjz-6OBT16LKufwThkKo/edit?gid=999209729" target="_blank" class="btn">🆕 Onboarding Nova</a>
+            <a href="https://docs.google.com/spreadsheets/d/1gYHJyXGnXYHu460zoDXgkTZnCUsiR_7CNhD6idHkUK8/edit?gid=2053986585" target="_blank" class="btn">👔 Estoque Uniformes</a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScMLZxEi-NBm2nJclYdOQ5TMBaHQO5DrA2kiqcrNBC6AtPejA/viewform" target="_blank" class="btn">🔄 Solicitar Troca Uniforme</a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdLCDUV10SSJPuma8YSmWsmyCXjwvKwU89zjGnduImbP0Heug/viewform" target="_blank" class="btn">🪪 2ª Via Crachá</a>
+        </div>
+    </div>
+
+    <div class="category-card cat-bi">
+        <h2>📊 Dashboards & BI</h2>
+        <div class="link-grid">
+            <a href="https://lookerstudio.google.com/reporting/e4eb056d-9e83-49c3-bc0e-8def757cdb85/page/Jlz9D" target="_blank" class="btn">📅 Programação Geral</a>
+            <a href="https://lookerstudio.google.com/reporting/ae33cb26-975b-43ae-83ea-a0d1d80b0f10/page/p_2jrcf0yizd" target="_blank" class="btn">👕 Programação Uniformes</a>
+            <a href="https://meli.sealsolutions.com.br/widget/index/Cc8g3yLO1TtV2UlW3yD3ag%25253d%25253d" target="_blank" class="btn">🔒 SEAL Solutions</a>
+        </div>
+    </div>
+
+</div>
+
+<div class="footer">
+    Dashboard Operacional © 2024 - Organizado para Fluxo de Insumos
+</div>
+
+</body>
+</html>
